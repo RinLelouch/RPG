@@ -1,15 +1,14 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import java.util.Set;
 
-public  class Character {
+public abstract class Character {
     private String name;
     private int hp;
     private int mp;
-    private ArrayList<Skills>();
+    private Set<Skills> skills;
     private int lvl;
     private int exp;
 
-    public Character(String name, int hp, int mp, int lvl, int exp, ArrayList<Skills> skills){
+    public Character(String name, int hp, int mp, int lvl, int exp, Set<Skills> skills){
         this.name=name;
         this.hp=hp;
         this.mp=mp;
@@ -67,6 +66,13 @@ public  class Character {
             System.out.println("Congratulations, u have leveled up, u are now lvl " + getLvl());
         }
     }
+    public void monsterIsDead(Monsters monster){
+        if (monster.getHp()<=0){
+            this.setExp(getExp()+ monster.getExp());
+        }
+        lvlUp();
+        addSkill();
+    }
     public void normalAttack(){
 
     }
@@ -74,4 +80,13 @@ public  class Character {
 
     }
 
+    public void skillAdd(Skills s){
+        this.skills.add(s);
+    }
+
+    public abstract void addSkill();
+
+
+
+    public abstract void normalAttack(Monsters monster);
 }
