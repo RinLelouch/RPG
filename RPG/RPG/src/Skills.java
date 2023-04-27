@@ -28,9 +28,39 @@ public enum Skills {
     EVISCERATE("eviscerate", 100, 120, Assassin),
     KNIFE_THROW("knife throw", 80, 100, Assassin),
     //SHADOW_MASTER
-    CAMUFLAGE("camuflage", 100, 0 , ShadowMaster),
-    POISON_FANG("poison fang", 120, 80, ShadowMaster);
-    Skills(String name, int mpNeeded, int damage, Class jobRestriction){
+    CAMOUFLAGE("camouflage", 100, 0 , ShadowMaster),
+    POISON_FANG("poison fang", 120, 80, ShadowMaster),
+
+    //GOBLIN
+    STAB("stab", 20, 20, Monster.GOBLIN),
+    SAND_THROW("sand throw", 10 , 10 , Monster.GOBLIN),
+
+    //KOBOLD
+    CLAW_SLASH("claw slash", 30, 30, Monster.KOBOLD),
+    TAIL_WHIP("tail whip", 20, 15, Monster.KOBOLD),
+
+    //ORC
+    RUSH("rush" , 40, 50, Monster.ORC),
+    BAT_SLASH("bat slash", 50, 60, Monster.ORC),
+
+    //MERMAID
+    TRIDENT_SLASH("trident slash", 40, 40, Monster.MERMAID),
+    WATER_PISTOL("water pistol", 50, 50, Monster.MERMAID),
+
+    //SKELETON
+    BONE_SWORD_SLASH("bone sword slash", 30, 45, Monster.SKELETON),
+    BONE_SHIELD_BASH("bone shield bash", 20, 50, Monster.SKELETON),
+
+    //GIANT_SPIDER
+    VENOM_FANG("venom fang",30, 30,Monster.GIANT_SPIDER),
+    POISON_CLOUD("poison cloud", 50, 60, Monster.GIANT_SPIDER),
+
+    //DRAGON
+    DRAGON_BREATH("dragon breath", 250, 500, Monster.DRAGON),
+    DRAGON_CLAW("dragon claw", 50, 175, Monster.DRAGON);
+
+
+    Skills(String name, int mpNeeded, int damage, Object jobRestriction){
 
     }
 

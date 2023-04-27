@@ -5,11 +5,11 @@ public  class Character {
     private String name;
     private int hp;
     private int mp;
-    private ArrayList<Skill>();
+    private ArrayList<Skills>();
     private int lvl;
     private int exp;
 
-    public Character(String name, int hp, int mp, int lvl, int exp, ArrayList<Skill> skills){
+    public Character(String name, int hp, int mp, int lvl, int exp, ArrayList<Skills> skills){
         this.name=name;
         this.hp=hp;
         this.mp=mp;
